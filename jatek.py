@@ -8,8 +8,8 @@ from rich.console import Console'''
   
 print("") 
 
-bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
-# pyfiglet.figlet_format("Kalandprogram", font = "banner3-D" )
+#bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
+bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "banner3-D" )
 # print(colored(bannerKep, 'blue'))
 print(bannerKep)
 
