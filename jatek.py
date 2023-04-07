@@ -10,14 +10,12 @@ print("")
 
 bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
 # pyfiglet.figlet_format("Kalandprogram", font = "banner3-D" )
-print(colored(bannerKep, 'blue'))
+# print(colored(bannerKep, 'blue'))
 print(bannerKep)
 
 print(colored("| ", 'green'), "scientifically accurate, survival text-based adventure\nset in the future where climate change is inevitabl", colored(" |", 'green'))
-
 print(" ")
-
-print("[bold red]Welcome to Lost Cause.\nWould you like to load a save or start a new game?")
+print(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
 print(" ")
-print("[bold yellow] [L] [/bold yellow] LOAD")
-print("[bold yellow] [N] [/bold yellow] NEW GAME")
+print(colored(" [L]", 'yellow',  attrs=['bold']), "LOAD")
+print(colored(" [N]", 'yellow',  attrs=['bold']), "NEW GAME")
