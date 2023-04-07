@@ -24,3 +24,4 @@ print(colored(" [N] ", 'yellow',  attrs=['bold']) + "NEW GAME")
 
 elsoinput = input("---> " + colored("[N/L]", 'magenta') + ": ")
 
+# Függvények létrehozása majd!!!!
