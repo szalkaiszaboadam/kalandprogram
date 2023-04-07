@@ -13,6 +13,8 @@ bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "
 print(colored(bannerKep, 'light_grey'))
 # print(bannerKep)
 
+print("\n") 
+
 print(colored("| ", 'green') + "scientifically accurate, survival text-based adventure\nset in the future where climate change is inevitabl", colored(" |", 'green'))
 print(" ")
 print(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
