@@ -5,11 +5,19 @@ import sys
 from time import sleep
 from termcolor import colored
 
+def write(write):
+    for i in write:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.2)
+    next = input()
+
 '''from rich import print
 from rich.prompt import Prompt
 from rich.table import Table
 from rich.console import Console'''
-  
+
+
 print("") 
 
 bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
@@ -29,8 +37,6 @@ print(colored(" [N] ", 'yellow',  attrs=['bold']) + "NEW GAME")
 elsoinput = input("---> " + colored("[N/L]", 'magenta') + ": ")
 
 
-
-
 print("Before the sleep statement")
 time.sleep(1)
 print("After the sleep statement")
@@ -43,12 +49,6 @@ emon = random.randint(100,500)
 print(outc)
 print(emon)
 
-
-
-words = f"{emon} fsdfs"
-for char in words:
-    sleep(0.2)
-    sys.stdout.write(char)
-    sys.stdout.flush()
+write(colored(" [L]sdfsdfsfsfdsd ", 'yellow',  attrs=['bold']) + "LOsf sf sdfs dfsdfsdfAD")
 
 # Függvények létrehozása majd!!!! https://sulipy.hu/eljarasok_fuggvenyek/fuggveny?tab=peldak
