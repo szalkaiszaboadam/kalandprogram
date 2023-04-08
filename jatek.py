@@ -1,4 +1,5 @@
 import pyfiglet
+import time
 from termcolor import colored
 
 '''from rich import print
@@ -23,5 +24,14 @@ print(colored(" [L] ", 'yellow',  attrs=['bold']) + "LOAD")
 print(colored(" [N] ", 'yellow',  attrs=['bold']) + "NEW GAME")
 
 elsoinput = input("---> " + colored("[N/L]", 'magenta') + ": ")
+
+
+
+
+print("Before the sleep statement")
+time.sleep(5)
+print("After the sleep statement")
+
+
 
 # Függvények létrehozása majd!!!!
