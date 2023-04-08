@@ -1,6 +1,8 @@
 import pyfiglet
 import time
 import random
+import sys
+from time import sleep
 from termcolor import colored
 
 '''from rich import print
@@ -41,4 +43,12 @@ emon = random.randint(100,500)
 print(outc)
 print(emon)
 
-# Függvények létrehozása majd!!!!
+
+
+words = f"{emon} fsdfs"
+for char in words:
+    sleep(0.2)
+    sys.stdout.write(char)
+    sys.stdout.flush()
+
+# Függvények létrehozása majd!!!! https://sulipy.hu/eljarasok_fuggvenyek/fuggveny?tab=peldak
