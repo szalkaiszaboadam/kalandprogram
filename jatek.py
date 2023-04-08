@@ -1,5 +1,6 @@
 import pyfiglet
 import time
+import random
 from termcolor import colored
 
 '''from rich import print
@@ -29,9 +30,15 @@ elsoinput = input("---> " + colored("[N/L]", 'magenta') + ": ")
 
 
 print("Before the sleep statement")
-time.sleep(5)
+time.sleep(1)
 print("After the sleep statement")
 
+outc = ['good', 'not', 'maybe']
+outc = random.choice(outc)
+emon = random.randint(100,500)
+# emon = round(emon)
 
+print(outc)
+print(emon)
 
 # Függvények létrehozása majd!!!!
