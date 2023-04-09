@@ -5,6 +5,9 @@ import sys
 from time import sleep
 from termcolor import colored
 
+import os
+
+
 def write(write):
     for i in write:
         sys.stdout.write(i)
@@ -32,10 +35,57 @@ print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által ké
 print("")
 write(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
 print("\n")
-print(colored(" [L] ", 'yellow',  attrs=['bold']) + "LOAD")
-print(colored(" [N] ", 'yellow',  attrs=['bold']) + "NEW GAME")
+print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
+print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
 
-elsoinput = input("---> " + colored("[N/L]", 'magenta') + ": ")
+elsoinput = ""
+
+while elsoinput == "B" or "Ú":
+    elsoinput = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+    '''if elsoinput == "B":
+        print("B")
+    elif elsoinput == "Ú":
+        print("Ú")'''
+else:
+    clear = lambda: os.system('cls')
+    clear()
+
+    print(colored(bannerKep, 'light_grey'))
+    print("") 
+    print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
+    print("")
+    print(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
+    print("\n")
+    print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
+    print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
+    elsoinput = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 '''
 print("Before the sleep statement")
@@ -50,6 +100,8 @@ emon = random.randint(100,500)
 
 print(outc)
 print(emon)
+
+
 
 
 
