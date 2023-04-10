@@ -51,6 +51,7 @@ nev = ""
 penz = ""
 
 
+
 if kezdoValasztas == "B":
     print(colored("\nJelenleg elmentett karakterek:", 'yellow'))
 
@@ -72,7 +73,10 @@ if kezdoValasztas == "B":
 
     
     if os.stat("mentesek.txt").st_size == 0:
-        print("\n Nincs elmentett karakter. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
+        print("\n Nincs elmentett karakter.")
+        
+        ujatekValasztas = input("Szeretnél új játékot kezdeni?")
+
     else:
         for i in range(len(mentsekOssz)):
             print(" " + mentsekOssz[i]["nev"])
@@ -94,8 +98,46 @@ if kezdoValasztas == "B":
 
 
 
+
 if kezdoValasztas == "Ú":
 
+    mentsekOssz = []
+    nevTemp = ""
+    mentettNevek = ''
+
+    mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+    sorok = mentesekTxt.readlines()#[1:]
+
+    for i in sorok:
+        sor_darab = i.strip().split(";")
+        adat = {
+            "nev": sor_darab[0],
+            "penz": sor_darab[1],
+        }
+        mentsekOssz.append(adat)
+
+    mentesekTxt.close()
+
+    for i in range(len(mentsekOssz)):
+        print(" " + mentsekOssz[i]["nev"])
+        mentettNevek += mentsekOssz[i]["nev"] + "/"
+
+    while True:
+        nevTemp = input("\nMilyen nevet szeretnél magadnak adni? (Ezt később már nem változtathatja meg) és ezzel a névvel lesz elmentve \n--->: ")
+        
+        if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
+            nev += nevTemp
+            break
+        else:
+            print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
+
+
+
+
+
+
+
+print(nev)
 
 
 
@@ -105,11 +147,6 @@ if kezdoValasztas == "Ú":
 
 
 
-
-
-
-
-#print(mentsekOssz)
 
 '''
 print("Before the sleep statement")
