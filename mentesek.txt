@@ -3,3 +3,4 @@ Balazs;200
 Cecilia;300
 David;400
 Emilia;500
+Bogi;600

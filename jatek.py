@@ -119,7 +119,6 @@ if kezdoValasztas == "Ú":
     mentesekTxt.close()
 
     for i in range(len(mentsekOssz)):
-        print(" " + mentsekOssz[i]["nev"])
         mentettNevek += mentsekOssz[i]["nev"] + "/"
 
     while True:
@@ -135,6 +134,11 @@ if kezdoValasztas == "Ú":
 
 
 
+txt = open("mentesek.txt", "a+", encoding="utf8")
+
+print(f"\n{nev};600", file=txt)
+
+txt.close()
 
 
 print(nev)
