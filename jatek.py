@@ -34,7 +34,6 @@ print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
 
 
-
 kezdoValasztas = ''
 
 while True:
@@ -48,11 +47,15 @@ while True:
         print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
 
 
+nev = ""
+penz = ""
+
 
 if kezdoValasztas == "B":
-    print(colored("\nJelenleg elmentett játékok:", 'yellow'))
+    print(colored("\nJelenleg elmentett karakterek:", 'yellow'))
 
     mentsekOssz = []
+    mentettNevek = ''
 
     mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
     sorok = mentesekTxt.readlines()#[1:]
@@ -69,24 +72,34 @@ if kezdoValasztas == "B":
 
     
     if os.stat("mentesek.txt").st_size == 0:
-        print("\n There are no saved characters. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
+        print("\n Nincs elmentett karakter. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
     else:
         for i in range(len(mentsekOssz)):
             print(" " + mentsekOssz[i]["nev"])
+            mentettNevek += mentsekOssz[i]["nev"] + "/"
+
+        mentesValasztas = ''
+        while True:
+            mentesValasztas = input("---> " + colored(f"[{mentettNevek}]", 'magenta') + ": ")
+            
+            if mentesValasztas != "/" and mentesValasztas in mentettNevek:
+                for i in range(len(mentsekOssz)):
+                    if mentesValasztas == mentsekOssz[i]["nev"]:
+                        nev = mentsekOssz[i]["nev"]
+                        penz = mentsekOssz[i]["penz"]
+
+                break
+            else:
+                print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
 
 
-        '''mentesValasztas = ''
 
-            while True:
-                mentesValasztas = input("--->:")
-                
-                if mentesValasztas == mentsekOssz[i]["nev"]:
-                    break
-                else:
-                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))'''
+if kezdoValasztas == "Ú":
 
 
-    
+
+
+
 
 
 
