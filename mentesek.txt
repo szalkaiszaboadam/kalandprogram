@@ -1,2 +1,5 @@
-nev;penz
 Adam;100
+Balazs;200
+Cecilia;300
+David;400
+Emilia;500

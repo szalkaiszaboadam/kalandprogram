@@ -55,7 +55,7 @@ if kezdoValasztas == "B":
     mentsekOssz = []
 
     mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
-    sorok = mentesekTxt.readlines()[1:]
+    sorok = mentesekTxt.readlines()#[1:]
 
     for i in sorok:
         sor_darab = i.strip().split(";")
@@ -67,26 +67,23 @@ if kezdoValasztas == "B":
 
     mentesekTxt.close()
 
-    for i in range(len(mentsekOssz)):
-        if os.stat("mentesek.txt").st_size == 0:
-            print("\n There are no saved characters. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
-
     
+    if os.stat("mentesek.txt").st_size == 0:
+        print("\n There are no saved characters. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
+    else:
+        for i in range(len(mentsekOssz)):
+            print(" " + mentsekOssz[i]["nev"])
 
-        else:
-            print("\n " + mentsekOssz[i]["nev"])
 
-            mentesValasztas = ''
+        '''mentesValasztas = ''
 
             while True:
-                mentesValasztas = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+                mentesValasztas = input("--->:")
                 
-                if mentesValasztas == "B":
-                    break
-                if kezdoValasztas == "Ú":
+                if mentesValasztas == mentsekOssz[i]["nev"]:
                     break
                 else:
-                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))'''
 
 
     
