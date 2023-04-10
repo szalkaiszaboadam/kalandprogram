@@ -4,7 +4,6 @@ import random
 import sys
 from time import sleep
 from termcolor import colored
-
 import os
 
 
@@ -22,15 +21,11 @@ from rich.console import Console'''
 
 
 print("") 
-
 bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
 # bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "banner3-D" )
 print(colored(bannerKep, 'light_grey'))
 # print(bannerKep)
-
 print("") 
-
-
 print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
 print("")
 write(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
@@ -38,30 +33,63 @@ print("\n")
 print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
 
-elsoinput = ""
 
-while elsoinput == "B" or "Ú":
-    elsoinput = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
-    '''if elsoinput == "B":
-        print("B")
-    elif elsoinput == "Ú":
-        print("Ú")'''
-else:
-    clear = lambda: os.system('cls')
-    clear()
 
-    print(colored(bannerKep, 'light_grey'))
-    print("") 
-    print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
-    print("")
-    print(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
-    print("\n")
-    print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
-    print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
-    elsoinput = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+kezdoValasztas = ''
+
+while True:
+    kezdoValasztas = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+    
+    if kezdoValasztas == "B":
+        break
+    if kezdoValasztas == "Ú":
+        break
+    else:
+        print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
 
 
 
+if kezdoValasztas == "B":
+    print(colored("\nJelenleg elmentett játékok:", 'yellow'))
+
+    mentsekOssz = []
+
+    mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+    sorok = mentesekTxt.readlines()[1:]
+
+    for i in sorok:
+        sor_darab = i.strip().split(";")
+        adat = {
+            "nev": sor_darab[0],
+            "penz": sor_darab[1],
+        }
+        mentsekOssz.append(adat)
+
+    mentesekTxt.close()
+
+    for i in range(len(mentsekOssz)):
+        if os.stat("mentesek.txt").st_size == 0:
+            print("\n There are no saved characters. Do [red]CTRL + C[/red] to [blue]quit[/blue] and [yellow]start the game again.[/yellow]")
+
+    
+
+        else:
+            print("\n " + mentsekOssz[i]["nev"])
+
+            mentesValasztas = ''
+
+            while True:
+                mentesValasztas = input("---> " + colored("[B/Ú]", 'magenta') + ": ")
+                
+                if mentesValasztas == "B":
+                    break
+                if kezdoValasztas == "Ú":
+                    break
+                else:
+                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+
+    
 
 
 
@@ -71,21 +99,7 @@ else:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#print(mentsekOssz)
 
 '''
 print("Before the sleep statement")
