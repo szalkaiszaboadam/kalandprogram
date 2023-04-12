@@ -1,6 +1,2 @@
-Adam;100
-Balazs;200
-Cecilia;300
-David;400
-Emilia;500
-Bogi;600
+Bogi;0;0;0;0;0;0
+Adus;0;0;0;0;0;0

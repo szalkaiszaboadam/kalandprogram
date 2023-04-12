@@ -58,19 +58,6 @@ if kezdoValasztas == "B":
     mentsekOssz = []
     mentettNevek = ''
 
-    mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
-    sorok = mentesekTxt.readlines()#[1:]
-
-    for i in sorok:
-        sor_darab = i.strip().split(";")
-        adat = {
-            "nev": sor_darab[0],
-            "penz": sor_darab[1],
-        }
-        mentsekOssz.append(adat)
-
-    mentesekTxt.close()
-
     
     if os.stat("mentesek.txt").st_size == 0:
         print("\n Nincs elmentett karakter.")
@@ -78,6 +65,20 @@ if kezdoValasztas == "B":
         ujatekValasztas = input("Szeretnél új játékot kezdeni?")
 
     else:
+
+        mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+        sorok = mentesekTxt.readlines()#[1:]
+
+        for i in sorok:
+            sor_darab = i.strip().split(";")
+            adat = {
+                "nev": sor_darab[0],
+                "penz": sor_darab[1],
+            }
+            mentsekOssz.append(adat)
+
+        mentesekTxt.close()
+
         for i in range(len(mentsekOssz)):
             print(" " + mentsekOssz[i]["nev"])
             mentettNevek += mentsekOssz[i]["nev"] + "/"
@@ -112,7 +113,7 @@ if kezdoValasztas == "Ú":
         sor_darab = i.strip().split(";")
         adat = {
             "nev": sor_darab[0],
-            "penz": sor_darab[1],
+            #"penz": sor_darab[1],
         }
         mentsekOssz.append(adat)
 
@@ -126,22 +127,17 @@ if kezdoValasztas == "Ú":
         
         if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
             nev += nevTemp
+            
+            txt = open("mentesek.txt", "a+", encoding="utf8")
+            print(f"{nev};0;0;0;0;0;0", file=txt)
+            txt.close()
+            
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
 
 
 
-
-
-txt = open("mentesek.txt", "a+", encoding="utf8")
-
-print(f"\n{nev};600", file=txt)
-
-txt.close()
-
-
-print(nev)
 
 
 
@@ -158,6 +154,7 @@ time.sleep(1)
 print("After the sleep statement")
 '''
 
+'''
 outc = ['good', 'not', 'maybe']
 outc = random.choice(outc)
 emon = random.randint(100,500)
@@ -165,10 +162,7 @@ emon = random.randint(100,500)
 
 print(outc)
 print(emon)
-
-
-
-
+'''
 
 
 # Függvények létrehozása majd!!!! https://sulipy.hu/eljarasok_fuggvenyek/fuggveny?tab=peldak
