@@ -43,7 +43,7 @@ ____)\_(____)_/(___|_'_'o8|"|8o'_'|:_o8o._.o8%8o_//_______\\_||||.o88o8&8o)/(88o
 print(bannerKep)
 print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
 print("")
-write(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
+write(colored("ghfgh.\ndfgdsf", 'red',  attrs=['bold']))
 print("\n")
 print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
@@ -68,8 +68,6 @@ penz = ""
  
 
 if kezdoValasztas == "B":
-    print(bannerKep)
-    print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
     print(colored("\nJelenleg elmentett karakterek:", 'yellow'))
 
     mentsekOssz = []
@@ -77,8 +75,6 @@ if kezdoValasztas == "B":
 
     
     if os.stat("mentesek.txt").st_size == 0:
-        print(bannerKep)
-        print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
         print("\n Nincs elmentett karakter.")
         
         ujatekValasztas = input("Szeretnél új játékot kezdeni?")
@@ -142,9 +138,7 @@ if kezdoValasztas == "Ú":
         mentettNevek += mentsekOssz[i]["nev"] + "/"
 
     while True:
-        print(bannerKep)
-        print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
-        nevTemp = input("\nMilyen nevet szeretnél magadnak adni? (Ezt később már nem változtathatja meg) és ezzel a névvel lesz elmentve \n--->: ")
+        nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ", 'red') + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem változtathatja meg, mert a karaktered ezen a néven lesz elmentve", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
         
         if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
             nev += nevTemp
@@ -152,7 +146,14 @@ if kezdoValasztas == "Ú":
             txt = open("mentesek.txt", "a+", encoding="utf8")
             print(f"{nev};0;0;0;0;0;0", file=txt)
             txt.close()
-            
+
+            write(f"{nev}!"); time.sleep(1); write(" Örülök, hogy megismerhetlek!"); 
+            time.sleep(2)
+
+
+
+            non = input("\nKezdődhet a játék?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))

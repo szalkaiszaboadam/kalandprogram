@@ -2,3 +2,9 @@ Bogi;0;0;0;0;0;0
 Adus;0;0;0;0;0;0
 Gábor;0;0;0;0;0;0
 ddd;0;0;0;0;0;0
+Adam;0;0;0;0;0;0
+adam;0;0;0;0;0;0
+& "C:/Program Files/Python310/python.exe" c:/Users/Szalkai-SzaboAdam/Documents/GitHub/kalandprogram/jatek.py;0;0;0;0;0;0
+Pisti;0;0;0;0;0;0
+PIsti;0;0;0;0;0;0
+oi;0;0;0;0;0;0
