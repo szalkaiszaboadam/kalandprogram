@@ -39,9 +39,8 @@ ____)\_(____)_/(___|_'_'o8|"|8o'_'|:_o8o._.o8%8o_//_______\\_||||.o88o8&8o)/(88o
 #print("") 
 # bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
 # bannerKep = pyfiglet.figlet_format("Lost", font = "5lineoblique" )
-print(colored(bannerKep, 'light_grey')) #light_grey
-# print(bannerKep)
-#print("") 
+#print(colored(bannerKep, 'light_grey')) #light_grey
+print(bannerKep)
 print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
 print("")
 write(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
@@ -66,9 +65,11 @@ while True:
 nev = ""
 penz = ""
 
-
+ 
 
 if kezdoValasztas == "B":
+    print(bannerKep)
+    print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
     print(colored("\nJelenleg elmentett karakterek:", 'yellow'))
 
     mentsekOssz = []
@@ -76,6 +77,8 @@ if kezdoValasztas == "B":
 
     
     if os.stat("mentesek.txt").st_size == 0:
+        print(bannerKep)
+        print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
         print("\n Nincs elmentett karakter.")
         
         ujatekValasztas = input("Szeretnél új játékot kezdeni?")
@@ -103,7 +106,7 @@ if kezdoValasztas == "B":
         while True:
             mentesValasztas = input("---> " + colored(f"[{mentettNevek}]", 'magenta') + ": ")
             
-            if mentesValasztas != "/" and mentesValasztas in mentettNevek:
+            if mentesValasztas != "/" and mentesValasztas != "" and mentesValasztas in mentettNevek:
                 for i in range(len(mentsekOssz)):
                     if mentesValasztas == mentsekOssz[i]["nev"]:
                         nev = mentsekOssz[i]["nev"]
@@ -139,6 +142,8 @@ if kezdoValasztas == "Ú":
         mentettNevek += mentsekOssz[i]["nev"] + "/"
 
     while True:
+        print(bannerKep)
+        print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
         nevTemp = input("\nMilyen nevet szeretnél magadnak adni? (Ezt később már nem változtathatja meg) és ezzel a névvel lesz elmentve \n--->: ")
         
         if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
