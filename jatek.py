@@ -77,7 +77,54 @@ if kezdoValasztas == "B":
     if os.stat("mentesek.txt").st_size == 0:
         print("\n Nincs elmentett karakter.")
         
-        ujatekValasztas = input("Szeretnél új játékot kezdeni?")
+        ujatekValasztas = ''
+
+        while True:
+            ujatekValasztas = input("Szeretnél új játékot kezdeni?\n" + "---> " + colored("[I/N]", 'magenta') + ": ")
+        
+            if ujatekValasztas == "I":
+
+
+                mentsekOssz = []
+                nevTemp = ""
+                mentettNevek = ''
+
+                mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+                sorok = mentesekTxt.readlines()#[1:]
+
+                for i in sorok:
+                    sor_darab = i.strip().split(";")
+                    adat = {
+                        "nev": sor_darab[0],
+                        #"penz": sor_darab[1],
+                    }
+                    mentsekOssz.append(adat)
+
+                mentesekTxt.close()
+
+                for i in range(len(mentsekOssz)):
+                    mentettNevek += mentsekOssz[i]["nev"] + "/"
+
+                while True:
+                    nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ", 'red') + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem változtathatja meg, mert a karaktered ezen a néven lesz elmentve", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
+                    
+                    if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
+                        nev += nevTemp
+                        
+                        txt = open("mentesek.txt", "a+", encoding="utf8")
+                        print(f"{nev};0;0;0;0;0;0", file=txt)
+                        txt.close()
+
+                        break
+                    else:
+                        print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
+
+
+            if ujatekValasztas == "N":
+                exit()
+            else:
+                print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
 
     else:
 
@@ -147,18 +194,16 @@ if kezdoValasztas == "Ú":
             print(f"{nev};0;0;0;0;0;0", file=txt)
             txt.close()
 
-            write(f"\n{nev}!"); time.sleep(1); write(" Örülök, hogy megismerhetlek! " + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
-            time.sleep(2)
-
-
-            non = input("\nKészen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
-
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
 
 
 
+#write(colored(f"\n{nev}!"), 'green'); time.sleep(1); #write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
+time.sleep(2)
+
+non = input("\nKészen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
 
 
