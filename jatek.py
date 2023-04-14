@@ -19,13 +19,29 @@ from rich.prompt import Prompt
 from rich.table import Table
 from rich.console import Console'''
 
-
-print("") 
-bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
-# bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "banner3-D" )
-print(colored(bannerKep, 'light_grey'))
+bannerKep = r'''
+                                                      __/_
+                                                       /|___            
+                                                    .'T'. - -'.        
+                                                 .'/|||||\'. - -'.             
+                                               .'/|||||||||\'. - -'.                     
+                                             .'/|||||___|||||\'. - -'.     .    
+                                            //|||||||||||||||||\\ - - \   /|\          
+                                           //|||||||||||||||||||\\ - - \ //|\\            
+                                          //|||||||||||||||||||||\\_____\//|\\
+                    ____________::___      ||||||||||/-\||||||||| ||||| ///|\\\
+     _        _    /_)_)_)_)_)_)_)_)/\     ||||| \\       // |||| ||||| ///|\\\
+    ( )_    _( )  /_)_)_)_)_)_)_)_)/ _\    |||||   \\   //   |||| |||||////|\\\\
+   (  )_)  (  )_)  | :__:    :__: |: |     |||||     \x\     |||| |||||////|\\\\
+  (_(_ (_)(_) _)_) |  _         _ | :|     |||||   //   \\   |||| ||||/////|\\\\\
+____)\_(____)_/(___|_'_'o8|"|8o'_'|:_o8o._.o8%8o_//_______\\_||||.o88o8&8o)/(88o.____
+'''
+#print("") 
+# bannerKep = pyfiglet.figlet_format("Kalandprogram", font = "slant") # , font = "slant"
+# bannerKep = pyfiglet.figlet_format("Lost", font = "5lineoblique" )
+print(colored(bannerKep, 'light_grey')) #light_grey
 # print(bannerKep)
-print("") 
+#print("") 
 print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
 print("")
 write(colored("Welcome to Lost Cause.\nWould you like to load a save or start a new game?", 'red',  attrs=['bold']))
