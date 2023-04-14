@@ -217,21 +217,12 @@ if kezdoValasztas == "Ú":
 
 
 
-
-
-
-
-
-
-
-
-'''
 print("Before the sleep statement")
 time.sleep(1)
 print("After the sleep statement")
-'''
 
-'''
+
+
 outc = ['good', 'not', 'maybe']
 outc = random.choice(outc)
 emon = random.randint(100,500)
@@ -239,7 +230,5 @@ emon = random.randint(100,500)
 
 print(outc)
 print(emon)
-'''
 
 
-# Függvények létrehozása majd!!!! https://sulipy.hu/eljarasok_fuggvenyek/fuggveny?tab=peldak
