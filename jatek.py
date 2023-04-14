@@ -43,7 +43,7 @@ ____)\_(____)_/(___|_'_'o8|"|8o'_'|:_o8o._.o8%8o_//_______\\_||||.o88o8&8o)/(88o
 print(bannerKep)
 print(colored("| ", 'green') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'green'))
 print("")
-write(colored("ghfgh.\ndfgdsf", 'red',  attrs=['bold']))
+write(colored("Üdvözöllek a farmon.\ndfgdsf", 'red',  attrs=['bold']))
 print("\n")
 print(colored(" [B] ", 'yellow',  attrs=['bold']) + "BETÖLTÉS")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "ÚJ JÁTÉK")
@@ -147,12 +147,11 @@ if kezdoValasztas == "Ú":
             print(f"{nev};0;0;0;0;0;0", file=txt)
             txt.close()
 
-            write(f"{nev}!"); time.sleep(1); write(" Örülök, hogy megismerhetlek!"); 
+            write(f"\n{nev}!"); time.sleep(1); write(" Örülök, hogy megismerhetlek! " + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
             time.sleep(2)
 
 
-
-            non = input("\nKezdődhet a játék?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+            non = input("\nKészen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
             break
         else:
