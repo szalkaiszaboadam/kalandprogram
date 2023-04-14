@@ -80,11 +80,9 @@ if kezdoValasztas == "B":
         ujatekValasztas = ''
 
         while True:
-            ujatekValasztas = input("Szeretnél új játékot kezdeni?\n" + "---> " + colored("[I/N]", 'magenta') + ": ")
+            ujatekValasztas = input("\nSzeretnél új játékot kezdeni?\n" + "---> " + colored("[I/N]", 'magenta') + ": ")
         
             if ujatekValasztas == "I":
-
-
                 mentsekOssz = []
                 nevTemp = ""
                 mentettNevek = ''
@@ -115,10 +113,19 @@ if kezdoValasztas == "B":
                         print(f"{nev};0;0;0;0;0;0", file=txt)
                         txt.close()
 
+                        write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
+
+
+                        time.sleep(2)
+
+                        non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
                         break
+
                     else:
                         print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
 
+                break
 
             if ujatekValasztas == "N":
                 exit()
@@ -194,16 +201,20 @@ if kezdoValasztas == "Ú":
             print(f"{nev};0;0;0;0;0;0", file=txt)
             txt.close()
 
+            write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
+
+
+            time.sleep(2)
+
+            non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
 
 
 
-#write(colored(f"\n{nev}!"), 'green'); time.sleep(1); #write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
-time.sleep(2)
 
-non = input("\nKészen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
 
 
