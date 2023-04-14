@@ -1,4 +1,4 @@
-# Kalandprogram elindítása
+# Kalandprogram
 ```
 #Könyvtárak letöltése
 pip install -r kovetelmenyek.txt
