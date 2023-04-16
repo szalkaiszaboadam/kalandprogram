@@ -61,7 +61,7 @@
 
 
 
-                         .    .
+                       .   .
        ...            :8b  :8b        .x+=:.                   s                                .    
    .xH8%"```"%.       `8"  `8"       z`    ^%                 :8                               @88>  
   x888~ xnHhx. ".         u.            .   <k      ..       .88           u.      .u    .     %8P   
@@ -75,13 +75,8 @@
 '888   8  '8888%`     'Y"          `   ^"F     '8    8888    'Y"       'Y"          "Y"        R888" 
   "*=="     ""                                 '8    888F                                       ""   
                                                 %k  <88F                                             
-                                                 "+:*%`   
-
-
-
-
-
-
-Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben
+                            Nagy Gábor és       "+:*%`    
+                                Szalkai-Szabó             kalandprogram Python nyelveben
+                                          Ádám által készített 
 
                                               

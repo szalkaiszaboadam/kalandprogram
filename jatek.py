@@ -44,7 +44,7 @@ print('''
 #print(colored(bannerKep, 'light_grey')) #light_grey
 #print("\n" + bannerKep)
 
-print(colored("\t| ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
+#print(colored("\t| ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
 print("")
 write(colored("Üdvözöllek a farmon.\ndfgdsf", 'light_grey',  attrs=['bold']))
 print("")
