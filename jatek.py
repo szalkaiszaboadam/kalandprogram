@@ -19,47 +19,24 @@ from rich.prompt import Prompt
 from rich.table import Table
 from rich.console import Console'''
 
-test = r'''
-
-   .                                                                         ...                     
-  @88>                                                                   .xH8%"```"%.                
-  %8P                                                                   x888~ xnHhx. ".         u.   
-   .                              .                                    X888X 8**8888k `.  ...ue888b  
- .@88u                           d8c                                   8888X<~  `8888L !  888R Y888r 
-''888E`                        ^*888%                                  88888!   .!8*"" `  888R I888> 
-  888E                           "8                                    `88888!"*888x      888R I888> 
-  888E                                                                  `*8888  8888L     888R I888> 
-  888E       .          .         .      88888888                      .x.`888X X888X    u8888cJ888  
-  888&      z8k       .@8c      .@8c     88888888                     '888> %8X !8888..-  "*888*P"   
-  R888"    %888*"    '%888"    '%888"                                 '888   8  '8888%`     'Y"      
-   ""       ?8F        ^*        ^*                                     "*=="     ""                 
-            .8                                                                                       
-            d"                                       8888888888888                                   
-           ~                                                                                         
-
-'''
 
 
 print('''
-
-
-       ...                           .x+=:.                   s                                .    
-   .xH8%"```"%.                     z`    ^%                 :8                               @88>  
-  x888~ xnHhx. ".         u.           .   <k      ..       .88           u.      .u    .     %8P   
- X888X 8**8888k `.  ...ue888b        .@8Ned8"    .@88i     :888ooo  ...ue888b   .d88B :@8c     .    
- 8888X<~  `8888L !  888R Y888r     .@^%8888"    ""%888>  -*8888888  888R Y888r ="8888f8888r  .@88u  
- 88888!   .!8*"" `  888R I888>    x88:  `)8b.     '88%     8888     888R I888>   4888>'88"  ''888E` 
- `88888!"*888x      888R I888>    8888N=*8888   ..dILr~`   8888     888R I888>   4888> '      888E  
-  `*8888  8888L     888R I888>     %8"    R88  '".-%88b    8888     888R I888>   4888>        888E  
- .x.`888X X888X    u8888cJ888       @8Wou 9%    @  '888k  .8888Lu= u8888cJ888   .d888L .+     888E  
-'888> %8X !8888..-  "*888*P"      .888888P`    8F   8888  ^%888*    "*888*P"    ^"8888*"      888&  
-'888   8  '8888%`     'Y"         `   ^"F     '8    8888    'Y"       'Y"          "Y"        R888" 
-  "*=="     ""                                '8    888F                                       ""   
-                                               %k  <88F                                             
-                                                "+:*%`                                              
-                                                                                                    
-
-
+                       .    .
+       ...            :8b  :8b        .x+=:.                   s                                .    
+   .xH8%"```"%.       `8"  `8"       z`    ^%                 :8                               @88>  
+  x888~ xnHhx. ".         u.            .   <k      ..       .88           u.      .u    .     %8P   
+ X888X 8**8888k `.  ...ue888b         .@8Ned8"    .@88i     :888ooo  ...ue888b   .d88B :@8c     .    
+ 8888X<~  `8888L !  888R Y888r      .@^%8888"    ""%888>  -*8888888  888R Y888r ="8888f8888r  .@88u  
+ 88888!   .!8*"" `  888R I888>     x88:  `)8b.     '88%     8888     888R I888>   4888>'88"  ''888E` 
+ `88888!"*888x      888R I888>     8888N=*8888   ..dILr~`   8888     888R I888>   4888> '      888E  
+  `*8888  8888L     888R I888>      %8"    R88  '".-%88b    8888     888R I888>   4888>        888E  
+ .x.`888X X888X    u8888cJ888        @8Wou 9%    @  '888k  .8888Lu= u8888cJ888   .d888L .+     888E  
+'888> %8X !8888..-  "*888*P"       .888888P`    8F   8888  ^%888*    "*888*P"    ^"8888*"      888&  
+'888   8  '8888%`     'Y"          `   ^"F     '8    8888    'Y"       'Y"          "Y"        R888" 
+  "*=="     ""                                 '8    888F                                       ""   
+                                                %k  <88F                                             
+                                                 "+:*%`                                                            
 ''')
 
 #print("") 
@@ -67,7 +44,7 @@ print('''
 #print(colored(bannerKep, 'light_grey')) #light_grey
 #print("\n" + bannerKep)
 
-print(colored("\t  | ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
+print(colored("\t| ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
 print("")
 write(colored("Üdvözöllek a farmon.\ndfgdsf", 'light_grey',  attrs=['bold']))
 print("")
@@ -79,11 +56,13 @@ print(colored(" [K] ", 'yellow',  attrs=['bold']) + "Kilépés")
 kezdoValasztas = ''
 
 while True:
-    kezdoValasztas = input("---> " + colored("[B/Ú]", 'grey') + ": ")
+    kezdoValasztas = input("---> " + colored("[B/Ú/K]", 'grey') + ": ")
     
     if kezdoValasztas == "B":
         break
     if kezdoValasztas == "Ú":
+        break
+    if kezdoValasztas == "K":
         break
     else:
         print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
@@ -92,7 +71,9 @@ while True:
 nev = ""
 penz = ""
 
- 
+if kezdoValasztas == "K":
+    time.sleep(1)
+    exit()
 
 if kezdoValasztas == "B":
     print(colored("\nJelenleg elmentett karakterek:", 'yellow'))
