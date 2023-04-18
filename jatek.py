@@ -19,7 +19,32 @@ from rich.prompt import Prompt
 from rich.table import Table
 from rich.console import Console'''
 
+os.system('cls')
+time.sleep(1)
 
+sys.stdout.write("fgdfgdfg")
+
+print('''
+               ____.-------------------------------------. 
+              |    |     ______                          |----------.
+              '.   |    |      |                         |        ˛.'
+                 `.|    |      |   <--  Add Item         |    ˛. ´
+                   |    |______|                         |, ´
+                   '.                                   .' 
+                     )_________________________________(
+ ,------------------[___________________________________]------------------.
+ '.        _____________ _____________  _____________ _____________       .' 
+   ':_;_;_|             |             ||             |             |_;_;,'  
+     |  | |             |             ||             |             | |  |
+     |  |`|             |             ||             |             |´|  |
+     |  | |             |             ||             |             | |  |
+     |  | |_____________|_____________||_____________|_____________| |  |     
+     |  |                                                            |  |
+     |  | |                                                        | |  |
+     |  | |                                                        | |  |
+     |  | |                                                        | |  |
+     |  | |                                                        | |  |
+''')
 
 print('''
                        .    .
@@ -46,7 +71,8 @@ print('''
 
 #print(colored("\t| ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
 print("")
-write(colored("Üdvözöllek a farmon.\ndfgdsf", 'light_grey',  attrs=['bold']))
+
+write(colored("\t\tÜdvözöllek a farmon.\ndfgdsf", 'light_grey',  attrs=['bold']))
 print("")
 print(colored(" [B] ", 'yellow',  attrs=['bold']) + "Betöltés")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "Új játék")
