@@ -6,7 +6,7 @@ from time import sleep
 from termcolor import colored
 import os
 
-'''
+
 def write(write):
     for i in write:
         sys.stdout.write(i)
@@ -14,31 +14,29 @@ def write(write):
         time.sleep(0.1)
     #next = input()
 
-
+'''
 from rich import print
 from rich.prompt import Prompt
 from rich.table import Table
 from rich.console import Console
+'''
 
 os.system('cls')
 time.sleep(1)
 #sys.stdout.write("fgdfgdfg")
 
 
-
-#colored( 
-#   
-#print('''                                            
-#          .-.    .'-           .-.                     
-#         (_) )  / //     .--.-'       /            .-. 
-#            /  /.-._.   (  (_).-. ---/---.-._.).--.`-' 
-#          _/_.'(   )     `-.     )_ /   (   )/    /    
-#       .  /   \ `-'    _    ) (   )/     `-'/  _.(__.  
-#      (_.'     `-'    (_.--'   `-'
-#''')#, 'light_grey',  attrs=['bold']))
+   
+print('''                                            
+          .-.    .'-           .-.                     
+         (_) )  / //     .--.-'       /            .-. 
+            /  /.-._.   (  (_).-. ---/---.-._.).--.`-' 
+          _/_.'(   )     `-.     )_ /   (   )/    /    
+       .  /   \ `-'    _    ) (   )/     `-'/  _.(__.  
+      (_.'     `-'    (_.--'   `-'
+''')#, 'light_grey',  attrs=['bold']))
 
 
-'''
 #print("") 
 #bannerKep = pyfiglet.figlet_format("A kovek meselnek...", font = "banner3-D" )
 #print(colored(bannerKep, 'light_grey')) #light_grey
@@ -211,29 +209,29 @@ if kezdoValasztas == "Ú":
             txt.close()
 
             write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
-'''
-#            print('''
-#
-#                           .-.            
-#                          /_  \           
-#                         /.:\  \          
-#                        /:::|_  .         
-#                        \ |:::) |         
-#                         \|::/  |         
-#                       _,´\:|    `--.     
-#           _     __.--´    )|   ´    \    
-#           \`--'´      )   \|         \   
-#           |        _.-\    !    \     \  
-#           | ´   ,-´    `.        `.   |  
-#           !   .´         `.        \  /  
-#           '.  |            \       | /   
-#            '| '             \      |´    
-#                              !     |   
-#
-#            ''')
+
+            print('''
+
+                           .-.            
+                          /_  \           
+                         /.:\  \          
+                        /:::|_  .         
+                        \ |:::) |         
+                         \|::/  |         
+                       _,´\:|    `--.     
+           _     __.--´    )|   ´    \    
+           \`--'´      )   \|         \   
+           |        _.-\    !    \     \  
+           | ´   ,-´    `.        `.   |  
+           !   .´         `.        \  /  
+           '.  |            \       | /   
+            '| '             \      |´    
+                              !     |   
+
+            ''')
 
 
-'''
+
             time.sleep(2)
 
             non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
@@ -260,14 +258,14 @@ emon = random.randint(100,500)
 
 print(outc)
 print(emon)
-'''
+
 
 
 #ascii teszt
 import os,time
 os.system('cls') 
 #szörny
-'''
+
 szorny = ["./images/szörny/img1.txt", "./images/szörny/img2.txt", "./images/szörny/img3.txt", "./images/szörny/img4.txt", 
             "./images/szörny/img5.txt", "./images/szörny/img6.txt", "./images/szörny/img7.txt", "./images/szörny/img8.txt",
             "./images/szörny/img9.txt", "./images/szörny/img10.txt", "./images/szörny/img11.txt", "./images/szörny/img12.txt", 
@@ -310,7 +308,7 @@ for frame in framesboszorkany:
     time.sleep(0.1)
     os.system('cls')
     
-'''
+
 #piramis
 piramis = ["./images/piramis/img1.txt","./images/piramis/img2.txt","./images/piramis/img3.txt"
             ,"./images/piramis/img4.txt","./images/piramis/img5.txt","./images/piramis/img6.txt"]
