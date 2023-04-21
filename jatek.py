@@ -14,19 +14,19 @@ def write(write):
         time.sleep(0.1)
     #next = input()
 
-
-'''from rich import print
+'''
+from rich import print
 from rich.prompt import Prompt
 from rich.table import Table
-from rich.console import Console'''
+from rich.console import Console
+'''
 
 os.system('cls')
 time.sleep(1)
 #sys.stdout.write("fgdfgdfg")
 
 
-
-#colored('''    
+   
 print('''                                            
           .-.    .'-           .-.                     
          (_) )  / //     .--.-'       /            .-. 
@@ -35,6 +35,7 @@ print('''
        .  /   \ `-'    _    ) (   )/     `-'/  _.(__.  
       (_.'     `-'    (_.--'   `-'
 ''')#, 'light_grey',  attrs=['bold']))
+
 
 #print("") 
 #bannerKep = pyfiglet.figlet_format("A kovek meselnek...", font = "banner3-D" )
@@ -229,6 +230,8 @@ if kezdoValasztas == "Ú":
 
             ''')
 
+
+
             time.sleep(2)
 
             non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
@@ -261,28 +264,62 @@ print(emon)
 #ascii teszt
 import os,time
 os.system('cls') 
+#szörny
 
-filnames = ["./images/img1.txt", "./images/img2.txt", "./images/img3.txt", "./images/img4.txt", 
-            "./images/img5.txt", "./images/img6.txt", "./images/img7.txt", "./images/img8.txt",
-            "./images/img9.txt", "./images/img10.txt", "./images/img11.txt", "./images/img12.txt", 
-            "./images/img13.txt", "./images/img14.txt", "./images/img15.txt", "./images/img16.txt", 
-            "./images/img17.txt", "./images/img18.txt", "./images/img19.txt", "./images/img20.txt", 
-            "./images/img21.txt", "./images/img22.txt", "./images/img23.txt", "./images/img24.txt", 
-            "./images/img25.txt", "./images/img26.txt", "./images/img27.txt", "./images/img28.txt", 
-            "./images/img29.txt", "./images/img30.txt", "./images/img31.txt", "./images/img32.txt", 
-            "./images/img33.txt", "./images/img34.txt", "./images/img35.txt", "./images/img36.txt", 
-            "./images/img37.txt", "./images/img38.txt", "./images/img39.txt", "./images/img40.txt", 
-            "./images/img41.txt", "./images/img42.txt", "./images/img43.txt", "./images/img44.txt",
-            "./images/img45.txt", "./images/img46.txt"]
-frames = []
+szorny = ["./images/szörny/img1.txt", "./images/szörny/img2.txt", "./images/szörny/img3.txt", "./images/szörny/img4.txt", 
+            "./images/szörny/img5.txt", "./images/szörny/img6.txt", "./images/szörny/img7.txt", "./images/szörny/img8.txt",
+            "./images/szörny/img9.txt", "./images/szörny/img10.txt", "./images/szörny/img11.txt", "./images/szörny/img12.txt", 
+            "./images/szörny/img13.txt", "./images/szörny/img14.txt", "./images/szörny/img15.txt", "./images/szörny/img16.txt", 
+            "./images/szörny/img17.txt", "./images/szörny/img18.txt", "./images/szörny/img19.txt", "./images/szörny/img20.txt", 
+            "./images/szörny/img21.txt", "./images/szörny/img22.txt", "./images/szörny/img23.txt", "./images/szörny/img24.txt", 
+            "./images/szörny/img25.txt", "./images/szörny/img26.txt", "./images/szörny/img27.txt", "./images/szörny/img28.txt", 
+            "./images/szörny/img29.txt", "./images/szörny/img30.txt", "./images/szörny/img31.txt", "./images/szörny/img32.txt", 
+            "./images/szörny/img33.txt", "./images/szörny/img34.txt", "./images/szörny/img35.txt", "./images/szörny/img36.txt", 
+            "./images/szörny/img37.txt", "./images/szörny/img38.txt", "./images/szörny/img39.txt", "./images/szörny/img40.txt", 
+            "./images/szörny/img41.txt", "./images/szörny/img42.txt", "./images/szörny/img43.txt", "./images/szörny/img44.txt",
+            "./images/szörny/img45.txt", "./images/szörny/img46.txt"]
+framesszorny = []
 
-for name in filnames:
+for name in szorny:
     with open(name, "r", encoding="utf8") as f:
-        frames.append(f.readlines())
+        framesszorny.append(f.readlines())
 
 
-for frame in frames:
+for frame in framesszorny:
     print("".join(frame))
     time.sleep(0.09)
     os.system('cls')
 
+
+#boszorkany
+boszorkany = ["./images/boszorkany/img1.txt", "./images/boszorkany/img2.txt", "./images/boszorkany/img3.txt", 
+              "./images/boszorkany/img4.txt", "./images/boszorkany/img5.txt", "./images/boszorkany/img6.txt", 
+              "./images/boszorkany/img7.txt", "./images/boszorkany/img8.txt", "./images/boszorkany/img9.txt", 
+              "./images/boszorkany/img10.txt"]
+framesboszorkany = []
+
+for name in boszorkany:
+    with open(name, "r", encoding="utf8") as f:
+        framesboszorkany.append(f.readlines())
+
+
+for frame in framesboszorkany:
+    print("".join(frame))
+    time.sleep(0.1)
+    os.system('cls')
+    
+
+#piramis
+piramis = ["./images/piramis/img1.txt","./images/piramis/img2.txt","./images/piramis/img3.txt"
+            ,"./images/piramis/img4.txt","./images/piramis/img5.txt","./images/piramis/img6.txt"]
+framespiramis = []
+
+for name in piramis:
+    with open(name, "r", encoding="utf8") as f:
+        framespiramis.append(f.readlines())
+
+
+for frame in framespiramis:
+    print("".join(frame))
+    time.sleep(0.3)
+    os.system('cls')
