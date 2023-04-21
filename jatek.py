@@ -257,3 +257,32 @@ print(outc)
 print(emon)
 
 
+
+#ascii teszt
+import os,time
+os.system('cls') 
+
+filnames = ["./images/img1.txt", "./images/img2.txt", "./images/img3.txt", "./images/img4.txt", 
+            "./images/img5.txt", "./images/img6.txt", "./images/img7.txt", "./images/img8.txt",
+            "./images/img9.txt", "./images/img10.txt", "./images/img11.txt", "./images/img12.txt", 
+            "./images/img13.txt", "./images/img14.txt", "./images/img15.txt", "./images/img16.txt", 
+            "./images/img17.txt", "./images/img18.txt", "./images/img19.txt", "./images/img20.txt", 
+            "./images/img21.txt", "./images/img22.txt", "./images/img23.txt", "./images/img24.txt", 
+            "./images/img25.txt", "./images/img26.txt", "./images/img27.txt", "./images/img28.txt", 
+            "./images/img29.txt", "./images/img30.txt", "./images/img31.txt", "./images/img32.txt", 
+            "./images/img33.txt", "./images/img34.txt", "./images/img35.txt", "./images/img36.txt", 
+            "./images/img37.txt", "./images/img38.txt", "./images/img39.txt", "./images/img40.txt", 
+            "./images/img41.txt", "./images/img42.txt", "./images/img43.txt", "./images/img44.txt",
+            "./images/img45.txt", "./images/img46.txt"]
+frames = []
+
+for name in filnames:
+    with open(name, "r", encoding="utf8") as f:
+        frames.append(f.readlines())
+
+
+for frame in frames:
+    print("".join(frame))
+    time.sleep(0.09)
+    os.system('cls')
+
