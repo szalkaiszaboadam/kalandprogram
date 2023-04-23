@@ -287,7 +287,7 @@ for name in szorny:
 
 for frame in framesszorny:
     print("".join(frame))
-    time.sleep(0.09)
+    time.sleep(0.13)
     os.system('cls')
 
 
