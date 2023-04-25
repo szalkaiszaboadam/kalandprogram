@@ -323,3 +323,12 @@ for frame in framespiramis:
     print("".join(frame))
     time.sleep(0.3)
     os.system('cls')
+
+
+i = 1
+while i < 6:
+  valami = input("--> [I/N]")
+  if valami == "I":
+        i += 5
+  if valami == "N":
+        print("Folytatódik...")
