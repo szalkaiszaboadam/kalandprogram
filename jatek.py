@@ -325,10 +325,10 @@ for frame in framespiramis:
     os.system('cls')
 
 
-i = 1
-while i < 6:
+i = 0
+while i < 1:
   valami = input("--> [I/N]")
   if valami == "I":
-        i += 5
+        i += 1
   if valami == "N":
         print("Folytatódik...")
