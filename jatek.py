@@ -7,6 +7,8 @@ from termcolor import colored
 import os
 
 
+
+
 def write(write):
     for i in write:
         sys.stdout.write(i)
@@ -27,26 +29,20 @@ time.sleep(1)
 
 
    
-print('''                                            
-          .-.    .'-           .-.                     
-         (_) )  / //     .--.-'       /            .-. 
-            /  /.-._.   (  (_).-. ---/---.-._.).--.`-' 
-          _/_.'(   )     `-.     )_ /   (   )/    /    
-       .  /   \ `-'    _    ) (   )/     `-'/  _.(__.  
-      (_.'     `-'    (_.--'   `-'
-''')#, 'light_grey',  attrs=['bold']))
+
+#, 'light_grey',  attrs=['bold']))
 
 
 #print("") 
-#bannerKep = pyfiglet.figlet_format("A kovek meselnek...", font = "banner3-D" )
+bannerKep = pyfiglet.figlet_format("Szoveges kaland")
 #print(colored(bannerKep, 'light_grey')) #light_grey
-#print("\n" + bannerKep)
+print("\n" + bannerKep)
 
-#print(colored("\t| ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített kalandprogram Python nyelveben" + colored(" |", 'grey'))
 print("")
 
-write(colored("\t\tÜdvözöllek a farmon.\ndfgdsf", 'light_grey',  attrs=['bold']))
-print("")
+
+print(colored("|  ", 'grey') + "Nagy Gábor és Szalkai-Szabó Ádám által készített szöveges\nkalandprogram ami Python programozási nyelveben írodott" + colored("  |", 'grey'))
+print(colored("\nSzeretnél betölteni egy mentést vagy új játékot kezdeni?\n", 'red',  attrs=['bold']))
 print(colored(" [B] ", 'yellow',  attrs=['bold']) + "Betöltés")
 print(colored(" [Ú] ", 'yellow',  attrs=['bold']) + "Új játék")
 print(colored(" [K] ", 'yellow',  attrs=['bold']) + "Kilépés")
@@ -55,7 +51,7 @@ print(colored(" [K] ", 'yellow',  attrs=['bold']) + "Kilépés")
 kezdoValasztas = ''
 
 while True:
-    kezdoValasztas = input("---> " + colored("[B/Ú/K]", 'grey') + ": ")
+    kezdoValasztas = input("---> " + colored("[B/Ú/K]", 'magenta', attrs=['bold']) + ": ")
     
     if kezdoValasztas == "B":
         break
@@ -68,7 +64,13 @@ while True:
 
 
 nev = ""
-penz = ""
+eletero = 0
+penz = 0
+kard = 0
+pajzs = 0
+alma = 0
+kenyer = 0
+gyogyital = 0
 
 if kezdoValasztas == "K":
     time.sleep(1)
@@ -87,7 +89,7 @@ if kezdoValasztas == "B":
         ujatekValasztas = ''
 
         while True:
-            ujatekValasztas = input("\nSzeretnél új játékot kezdeni?\n" + "---> " + colored("[I/N]", 'magenta') + ": ")
+            ujatekValasztas = input("\nSzeretnél új játékot kezdeni?\n" + "---> " + colored("[I/N]", 'magenta', attrs=['bold']) + ": ")
         
             if ujatekValasztas == "I":
                 mentsekOssz = []
@@ -101,7 +103,13 @@ if kezdoValasztas == "B":
                     sor_darab = i.strip().split(";")
                     adat = {
                         "nev": sor_darab[0],
-                        #"penz": sor_darab[1],
+                        "eletero": int(sor_darab[1]),
+                        "penz": int(sor_darab[2]),
+                        "kard": int(sor_darab[3]),
+                        "pajzs": int(sor_darab[4]),
+                        "alma": int(sor_darab[5]),
+                        "kenyer" : int(sor_darab[6]),
+                        "gyogyital" : int(sor_darab[7]),
                     }
                     mentsekOssz.append(adat)
 
@@ -111,23 +119,33 @@ if kezdoValasztas == "B":
                     mentettNevek += mentsekOssz[i]["nev"] + "/"
 
                 while True:
-                    nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ", 'red') + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem változtathatja meg, mert a karaktered ezen a néven lesz elmentve", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
+                    nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ") + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem lehet megváltoztatni", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
                     
                     if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
                         nev += nevTemp
                         
                         txt = open("mentesek.txt", "a+", encoding="utf8")
-                        print(f"{nev};0;0;0;0;0;0", file=txt)
+                        print(f"{nev};100;0;1;1;0;0;0", file=txt)
                         txt.close()
 
-                        write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
+                        #write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
 
+                        print(colored("\nLétrehozunk téged...", "green")); time.sleep(2)
 
-                        time.sleep(2)
+                        print("Készen állsz a kalandra?", end='')
+                        time.sleep(1)
+                        var = input(colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
-                        non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+                        os.system('cls')
+
+                        write("\n  Utad legelején egy varázslóval találkozol össze. Látja, hogy nincs felszerelésed\n  ezért megszán egy karddal, egy pajjzsal és néhány jó tanáccsal.")
+                        time.sleep(2.7)
+                        os.system('cls')
+
 
                         break
+                        
+
 
                     else:
                         print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
@@ -149,7 +167,13 @@ if kezdoValasztas == "B":
             sor_darab = i.strip().split(";")
             adat = {
                 "nev": sor_darab[0],
-                "penz": sor_darab[1],
+                "eletero": int(sor_darab[1]),
+                "penz": int(sor_darab[2]),
+                "kard": int(sor_darab[3]),
+                "pajzs": int(sor_darab[4]),
+                "alma": int(sor_darab[5]),
+                "kenyer" : int(sor_darab[6]),
+                "gyogyital" : int(sor_darab[7]),
             }
             mentsekOssz.append(adat)
 
@@ -161,14 +185,21 @@ if kezdoValasztas == "B":
 
         mentesValasztas = ''
         while True:
-            mentesValasztas = input("---> " + colored(f"[{mentettNevek}]", 'magenta') + ": ")
+            mentesValasztas = input("\n---> " + colored(f"[{mentettNevek}]", 'magenta', attrs=['bold']) + ": ")
             
             if mentesValasztas != "/" and mentesValasztas != "" and mentesValasztas in mentettNevek:
                 for i in range(len(mentsekOssz)):
                     if mentesValasztas == mentsekOssz[i]["nev"]:
                         nev = mentsekOssz[i]["nev"]
+                        eletero = mentsekOssz[i]["eletero"]
                         penz = mentsekOssz[i]["penz"]
+                        kard = mentsekOssz[i]["kard"]
+                        pajzs = mentsekOssz[i]["pajzs"]
+                        alma = mentsekOssz[i]["alma"]
+                        kenyer = mentsekOssz[i]["kenyer"]
+                        gyogyital = mentsekOssz[i]["gyogyital"]
 
+                os.system('cls') 
                 break
             else:
                 print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
@@ -189,7 +220,13 @@ if kezdoValasztas == "Ú":
         sor_darab = i.strip().split(";")
         adat = {
             "nev": sor_darab[0],
-            #"penz": sor_darab[1],
+            "eletero": int(sor_darab[1]),
+            "penz": int(sor_darab[2]),
+            "kard": int(sor_darab[3]),
+            "pajzs": int(sor_darab[4]),
+            "alma": int(sor_darab[5]),
+            "kenyer" : int(sor_darab[6]),
+            "gyogyital" : int(sor_darab[7]),
         }
         mentsekOssz.append(adat)
 
@@ -199,136 +236,60 @@ if kezdoValasztas == "Ú":
         mentettNevek += mentsekOssz[i]["nev"] + "/"
 
     while True:
-        nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ", 'red') + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem változtathatja meg, mert a karaktered ezen a néven lesz elmentve", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
+        nevTemp = input(colored("\nMilyen nevet szeretnél magadnak adni? ") + colored("(", 'red', attrs=['bold']) + colored("Ezt később már nem lehet megváltoztatni", 'red') + colored(")", 'red', attrs=['bold']) + "\n--->: ")
         
         if nevTemp != "" and nevTemp != "/" and nevTemp not in mentettNevek:
             nev += nevTemp
-            
+
             txt = open("mentesek.txt", "a+", encoding="utf8")
-            print(f"{nev};0;0;0;0;0;0", file=txt)
+            print(f"{nev};100;0;1;1;0;0;0", file=txt)
             txt.close()
 
-            write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
 
-            print('''
+            mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+            sorok = mentesekTxt.readlines()#[1:]
 
-                           .-.            
-                          /_  \           
-                         /.:\  \          
-                        /:::|_  .         
-                        \ |:::) |         
-                         \|::/  |         
-                       _,´\:|    `--.     
-           _     __.--´    )|   ´    \    
-           \`--'´      )   \|         \   
-           |        _.-\    !    \     \  
-           | ´   ,-´    `.        `.   |  
-           !   .´         `.        \  /  
-           '.  |            \       | /   
-            '| '             \      |´    
-                              !     |   
+            for i in sorok:
+                sor_darab = i.strip().split(";")
+                adat = {
+                    "nev": sor_darab[0],
+                    "eletero": int(sor_darab[1]),
+                    "penz": int(sor_darab[2]),
+                    "kard": int(sor_darab[3]),
+                    "pajzs": int(sor_darab[4]),
+                    "alma": int(sor_darab[5]),
+                    "kenyer" : int(sor_darab[6]),
+                    "gyogyital" : int(sor_darab[7]),
+                }
+            mentsekOssz.append(adat)
 
-            ''')
+            mentesekTxt.close()
+
+            for i in range(len(mentsekOssz)):
+                if nevTemp == mentsekOssz[i]["nev"]:
+                        eletero = mentsekOssz[i]["eletero"]
+                        penz = mentsekOssz[i]["penz"]
+                        kard = mentsekOssz[i]["kard"]
+                        pajzs = mentsekOssz[i]["pajzs"]
+                        alma = mentsekOssz[i]["alma"]
+                        kenyer = mentsekOssz[i]["kenyer"]
+                        gyogyital = mentsekOssz[i]["gyogyital"]
+
+            #write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
+
+            print(colored("\nLétrehozunk téged...", "green")); time.sleep(2)
 
 
+            print("Készen állsz a kalandra?", end='')
+            time.sleep(1)
+            var = input(colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
-            time.sleep(2)
+            os.system('cls')
 
-            non = input("\n Készen állsz?" + colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+            write("\n  Utad legelején egy varázslóval találkozol össze. Látja, hogy nincs felszerelésed\n  ezért megszán egy karddal, egy pajjzsal és néhány jó tanáccsal.")
+            time.sleep(2.7)
+            os.system('cls')
 
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
-
-
-
-
-
-
-print("Before the sleep statement")
-time.sleep(1)
-print("After the sleep statement")
-
-
-
-outc = ['good', 'not', 'maybe']
-outc = random.choice(outc)
-emon = random.randint(100,500)
-# emon = round(emon)
-
-print(outc)
-print(emon)
-
-
-
-#ascii teszt
-import os,time
-os.system('cls') 
-#szörny
-
-szorny = ["./images/szörny/img1.txt", "./images/szörny/img2.txt", "./images/szörny/img3.txt", "./images/szörny/img4.txt", 
-            "./images/szörny/img5.txt", "./images/szörny/img6.txt", "./images/szörny/img7.txt", "./images/szörny/img8.txt",
-            "./images/szörny/img9.txt", "./images/szörny/img10.txt", "./images/szörny/img11.txt", "./images/szörny/img12.txt", 
-            "./images/szörny/img13.txt", "./images/szörny/img14.txt", "./images/szörny/img15.txt", "./images/szörny/img16.txt", 
-            "./images/szörny/img17.txt", "./images/szörny/img18.txt", "./images/szörny/img19.txt", "./images/szörny/img20.txt", 
-            "./images/szörny/img21.txt", "./images/szörny/img22.txt", "./images/szörny/img23.txt", "./images/szörny/img24.txt", 
-            "./images/szörny/img25.txt", "./images/szörny/img26.txt", "./images/szörny/img27.txt", "./images/szörny/img28.txt", 
-            "./images/szörny/img29.txt", "./images/szörny/img30.txt", "./images/szörny/img31.txt", "./images/szörny/img32.txt", 
-            "./images/szörny/img33.txt", "./images/szörny/img34.txt", "./images/szörny/img35.txt", "./images/szörny/img36.txt", 
-            "./images/szörny/img37.txt", "./images/szörny/img38.txt", "./images/szörny/img39.txt", "./images/szörny/img40.txt", 
-            "./images/szörny/img41.txt", "./images/szörny/img42.txt", "./images/szörny/img43.txt", "./images/szörny/img44.txt",
-            "./images/szörny/img45.txt", "./images/szörny/img46.txt"]
-framesszorny = []
-
-for name in szorny:
-    with open(name, "r", encoding="utf8") as f:
-        framesszorny.append(f.readlines())
-
-
-for frame in framesszorny:
-    print("".join(frame))
-    time.sleep(0.13)
-    os.system('cls')
-
-
-#boszorkany
-boszorkany = ["./images/boszorkany/img1.txt", "./images/boszorkany/img2.txt", "./images/boszorkany/img3.txt", 
-              "./images/boszorkany/img4.txt", "./images/boszorkany/img5.txt", "./images/boszorkany/img6.txt", 
-              "./images/boszorkany/img7.txt", "./images/boszorkany/img8.txt", "./images/boszorkany/img9.txt", 
-              "./images/boszorkany/img10.txt"]
-framesboszorkany = []
-
-for name in boszorkany:
-    with open(name, "r", encoding="utf8") as f:
-        framesboszorkany.append(f.readlines())
-
-
-for frame in framesboszorkany:
-    print("".join(frame))
-    time.sleep(0.1)
-    os.system('cls')
-    
-
-#piramis
-piramis = ["./images/piramis/img1.txt","./images/piramis/img2.txt","./images/piramis/img3.txt"
-            ,"./images/piramis/img4.txt","./images/piramis/img5.txt","./images/piramis/img6.txt"]
-framespiramis = []
-
-for name in piramis:
-    with open(name, "r", encoding="utf8") as f:
-        framespiramis.append(f.readlines())
-
-
-for frame in framespiramis:
-    print("".join(frame))
-    time.sleep(0.3)
-    os.system('cls')
-
-
-i = 0
-while i < 1:
-  valami = input("--> [I/N]")
-  if valami == "I":
-        i += 1
-  if valami == "N":
-        print("Folytatódik...")
