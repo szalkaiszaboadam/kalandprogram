@@ -130,52 +130,6 @@ if kezdoValasztas == "B":
 
                         #write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
 
-                        print(colored("\nLétrehozunk téged...", "green")); time.sleep(2)
-
-                        print("Készen állsz a kalandra?", end='')
-                        time.sleep(1)
-                        var = input(colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
-
-                        os.system('cls')
-
-                        write("\n  Utad legelején egy varázslóval találkozol össze. Látja, hogy nincs felszerelésed\n  ezért megszán egy karddal, egy pajjzsal és néhány jó tanáccsal.")
-                        time.sleep(2.7)
-                        os.system('cls')
-
-
-                        break
-                        
-
-
-                    else:
-                        print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
-
-                break
-
-            if ujatekValasztas == "N":
-                exit()
-            else:
-                print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
-
-
-    else:
-
-        mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
-        sorok = mentesekTxt.readlines()#[1:]
-
-        for i in sorok:
-            sor_darab = i.strip().split(";")
-            adat = {
-                "nev": sor_darab[0],
-                "eletero": int(sor_darab[1]),
-                "penz": int(sor_darab[2]),
-                "kard": int(sor_darab[3]),
-                "pajzs": int(sor_darab[4]),
-                "alma": int(sor_darab[5]),
-                "kenyer" : int(sor_darab[6]),
-                "gyogyital" : int(sor_darab[7]),
-            }
-            mentsekOssz.append(adat)
 
         mentesekTxt.close()
 
@@ -293,8 +247,7 @@ if kezdoValasztas == "Ú":
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
-        
-        
+
 i = 0
 leltar = ''
 
@@ -333,28 +286,28 @@ while i < 1:
   print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
   print("")
 
-valasztas = ''
+  valasztas = ''
 
 
-while True:
-    valasztas = input("---> " + colored("[F/L/Á/K]", 'magenta', attrs=['bold']) + ": ")
+  while True:
+        valasztas = input("---> " + colored("[F/L/Á/K]", 'magenta', attrs=['bold']) + ": ")
         
-    if valasztas == "F":
-        break
-    if valasztas == "L":
-        break
-    if valasztas == "Á":
-        break
-    if valasztas == "K":
-        break
-    else:
+        if valasztas == "F":
+            break
+        if valasztas == "L":
+            break
+        if valasztas == "Á":
+            break
+        if valasztas == "K":
+            break
+        else:
             print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
   
 
-if valasztas == "K": #Kilépés
+  if valasztas == "K": #Kilépés
         time.sleep(1)
         i += 1
-if valasztas == "F": #Felfedez
+  if valasztas == "F": #Felfedez
         
         os.system('cls')
 
@@ -541,7 +494,7 @@ if valasztas == "F": #Felfedez
             visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
 
-if valasztas == "L": #Leltár
+  if valasztas == "L": #Leltár
         
         os.system('cls')
 
@@ -582,6 +535,11 @@ if valasztas == "L": #Leltár
 
         #visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
+
+
+
+
+
         print(colored("\n\nSzeretnél felhasználni egy tárgyat?", 'red', attrs=['bold']))
 
         print(colored("\n [I] igen  ", 'green') + colored("[N] nem  ", 'yellow'))
@@ -597,7 +555,7 @@ if valasztas == "L": #Leltár
                 else:
                     print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
 
- #print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
+        #print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
         if valasztasIgenNem == "I":
 
             print(colored("\nVálassz egyet a rendelkezésre álló tárgyak közül:\n", 'red', attrs=['bold']))
@@ -630,6 +588,8 @@ if valasztas == "L": #Leltár
 
                 if gyogyital != 0:
                     felhasznalhatoTargyakRovid += "G/"
+
+
                 while True:
                     valasztasTargy = input("\n---> " + colored(f"[{felhasznalhatoTargyakRovid}]", 'magenta', attrs=['bold']) + ": ")
 
@@ -666,7 +626,7 @@ if valasztas == "L": #Leltár
             visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
         
         
-if valasztas == "Á": #Árus
+  if valasztas == "Á": #Árus
       
       os.system('cls')
 
@@ -709,4 +669,5 @@ if valasztas == "Á": #Árus
                     print(colored(f"\n- Nincs elég aranyforintod hogy megvásárolhasd ezt, mivel csak {penz} aranyforintod van"))
           
       
-      visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+      visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")     
+        
