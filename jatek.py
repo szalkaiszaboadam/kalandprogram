@@ -293,3 +293,42 @@ if kezdoValasztas == "Ú":
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
+        
+        
+i = 0
+leltar = ''
+
+while i < 1:
+  '''
+  for i in range(len(mentsekOssz)):
+        mentettNevek += mentsekOssz[i]["nev"] + "/"
+  txt = open("mentesek.txt", "a+", encoding="utf8")
+  print(f"{nev};100;0;0;0;0;0;0", file=txt)
+  txt.close()'''
+
+
+
+  
+  os.system('cls')
+
+
+  with open("mentesek.txt","r+") as f:
+    new_f = f.readlines()
+    f.seek(0)
+    for line in new_f:
+        if f"{nev}" not in line:
+            f.write(line)
+    f.truncate()
+
+  txt = open("mentesek.txt", "a+", encoding="utf8")
+  print(f"{nev};{eletero};{penz};{kard};{pajzs};{alma};{kenyer};{gyogyital}", file=txt)
+  txt.close()
+
+  print(f"· ·:·: " + colored(f"{nev}", attrs=['bold']) + " :·:· ·\n\n")
+  #print(colored(f"\t· ·:·: {nev} :·:· ·\n", attrs=['bold']))
+  print(colored(f"Életerőd: ") + colored(f"{eletero}\n", attrs=['bold']))
+
+
+  print(colored("Mit szeretnél csinálni?\n", 'red', attrs=['bold']))
+  print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
+  print("")
