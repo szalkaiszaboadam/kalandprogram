@@ -596,3 +596,37 @@ if valasztas == "L": #Leltár
                     break
                 else:
                     print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+ #print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
+        if valasztasIgenNem == "I":
+
+            print(colored("\nVálassz egyet a rendelkezésre álló tárgyak közül:\n", 'red', attrs=['bold']))
+
+            felhasznalhatoTargyak = ""
+
+            if alma != 0:
+                felhasznalhatoTargyak += colored(" [A] alma ", 'red')
+
+            if kenyer != 0:
+                felhasznalhatoTargyak += colored(" [K] kenyér ", 'yellow')
+
+            if gyogyital != 0:
+                felhasznalhatoTargyak += colored(" [G] gyógyulás itala ", 'blue')
+
+            if felhasznalhatoTargyak == "":
+                print(" Nincs nálad rendelkezésre álló tárgy")
+
+            if felhasznalhatoTargyak != "":
+        
+                print(felhasznalhatoTargyak)
+
+                felhasznalhatoTargyakRovid = ""
+
+                if alma != 0:
+                    felhasznalhatoTargyakRovid += "A/"
+
+                if kenyer != 0:
+                    felhasznalhatoTargyakRovid += "K/"
+
+                if gyogyital != 0:
+                    felhasznalhatoTargyakRovid += "G/"
