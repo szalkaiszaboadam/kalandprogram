@@ -332,3 +332,240 @@ while i < 1:
   print(colored("Mit szeretnél csinálni?\n", 'red', attrs=['bold']))
   print(colored(" [F] felfedez  ", 'green') + colored("[L] leltár  ", 'yellow') + colored("[Á] árus  ", 'red') + colored("[K] kilépés", 'blue'))
   print("")
+
+valasztas = ''
+
+
+while True:
+    valasztas = input("---> " + colored("[F/L/Á/K]", 'magenta', attrs=['bold']) + ": ")
+        
+    if valasztas == "F":
+        break
+    if valasztas == "L":
+        break
+    if valasztas == "Á":
+        break
+    if valasztas == "K":
+        break
+    else:
+            print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+  
+
+if valasztas == "K": #Kilépés
+        time.sleep(1)
+        i += 1
+if valasztas == "F": #Felfedez
+        
+        os.system('cls')
+
+        #randomka = ['var', 'utszeliCsoves', 'lovag', 'ismeretlenLeny', 'falu', 'erdo', 'barlang']
+        randomka = ['var', 'var']
+        #'utszeliCsoves', 'utszeliCsoves', 'ut', 'ut', 'ut', 'ut', 'ut', 'var', 'var', 'lovag', 'lovag'
+        randomValasztas = random.choice(randomka)
+
+        #megtámadod? megfutamodsz?
+        #bemész? elkerülöd?
+
+        if randomValasztas == "ut":
+            print("\n- Sétálsz egy úton, nem történik semmi...")
+
+            visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+        if randomValasztas == "utszeliCsoves":
+            randomkaCsoves = ['1', '2', '3']
+            randomValasztasCsoves = random.choice(randomkaCsoves)
+
+            if randomValasztasCsoves == "1":
+                print("- Összetalálkoztál egy útszélén lévő csövessel, mit teszel?")
+
+            if randomValasztasCsoves == "2":
+                print("- Meglátsz egy csövest az útszélén, mit akarsz tenni?")
+
+            if randomValasztasCsoves == "3":
+                print("- A távolban megpillantasz egy csövest, mit akarsz csinálni?")
+
+
+            print(colored("\n [K] kifosztás  ", 'green') + colored("[E] elkerülés  ", 'yellow'))
+            #valasztasCsoves = input("---> " + colored("[K/E]", 'magenta', attrs=['bold']) + ": ")
+
+            while True:
+                    valasztasCsoves = input("\n---> " + colored("[K/E]", 'magenta', attrs=['bold']) + ": ")
+        
+                    if valasztasCsoves == "K":
+                        break
+                    if valasztasCsoves == "E":
+                        break
+                    else:
+                        print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+                    
+            if valasztasCsoves == "K":
+                randomkaKifosztas = ['1', '1', '2', '2', '2', '3']
+                randomValasztasKifosztas = random.choice(randomkaKifosztas)
+
+                if randomValasztasKifosztas == "1":
+
+                    randomkaKifoszottDolog = ['penz', 'alma', 'alma', 'kenyer', 'kenyer']
+                    randomValasztasKifosztottDolog = random.choice(randomkaKifoszottDolog)
+
+                    if randomValasztasKifosztottDolog == "penz":
+                        penzRandom = random.randint(1,5)
+                        penz += penzRandom
+                        print(f"\nKifosztottad a csövest, találtál nála: {penzRandom}x aranyforintot. Továbbindulsz!")
+                    if randomValasztasKifosztottDolog == "alma":
+                        almaRandom = random.randint(1,3)
+                        alma += almaRandom
+                        print(f"\n- Kifosztottad a csövest, találtál nála: {almaRandom}x almát. Továbbindulsz!")
+
+                    if randomValasztasKifosztottDolog == "kenyer":
+                        kenyerRandom = random.randint(1,2)
+                        kenyer += kenyerRandom
+                        print(f"\n- Kifosztottad a csövest, találtál nála: {kenyerRandom}x kenyeret. Továbbindulsz!")
+
+                if randomValasztasKifosztas == "2":
+                    print("\n- Nem találtál semmit a csövesnél, ezért továbbindulsz.")
+
+                if randomValasztasKifosztas == "3":
+                    csovesTamadasRandom = random.randint(4,10)
+
+                    eletero = eletero - csovesTamadasRandom
+
+                    print(f"\n- Váratlanul rádtámad a csöves, {csovesTamadasRandom} sebzést okoz, így marad {eletero} életerőd.")
+
+            if valasztasCsoves == "E":
+                randomkaElkerules = ['1', '2']
+                randomValasztasElkerules = random.choice(randomkaElkerules)
+
+                if randomValasztasElkerules == "1":
+                    print("\n- Elhaladtál a csöves mellett, furcsán nézett rád.")
+                if randomValasztasElkerules == "2":
+                    print("\n- Elkerülted a csövest, megkönnyebülten sóhajt fel.")
+
+            
+            visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+        if randomValasztas == "var":
+            randomkaVar = ['1', '2', '3']
+            randomValasztasVar = random.choice(randomkaVar)
+
+            if randomValasztasVar == "1":
+                print("- A távolban, a ködből alig kilátszodó várat pillantasz meg, elindulsz az irányába?")
+
+            if randomValasztasVar == "2":
+                print("- A dombok tetjén egy vár magasodik ki, betérsz a várba?")
+
+            if randomValasztasVar == "3":
+                print("- Egy táblát pillantasz meg, észak irányába vár található, elindulsz felé?")
+
+
+            print(colored("\n [I] igen  ", 'green') + colored("[N] nem  ", 'yellow'))
+            #valasztasCsoves = input("---> " + colored("[K/E]", 'magenta', attrs=['bold']) + ": ")
+
+            while True:
+                    valasztasVar = input("\n---> " + colored("[I/N]", 'magenta', attrs=['bold']) + ": ")
+        
+                    if valasztasVar == "I":
+                        break
+                    if valasztasVar == "N":
+                        break
+                    else:
+                        print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+            if valasztasVar == "I":
+                randomkaVarIgen = ['1', '2', '2', '2', '3', '3']
+                randomValasztasVarIgen = random.choice(randomkaVarIgen)
+
+                if randomValasztasVarIgen == "1":
+                    forintRandom = random.randint(3,10)
+                    print(f"\n- A vár lakói régóta várták már egy ilyen emberre mint te, meg is ajándékoznak téged, kapsz tőlük {forintRandom}x aranyforintot")
+
+                if randomValasztasVarIgen == "2":
+
+                    randomkaKifoszottDolog = ['alma', 'alma', 'kenyer']
+                    randomValasztasKifosztottDolog = random.choice(randomkaKifoszottDolog)
+
+                    if randomValasztasKifosztottDolog == "alma":
+                        almaRandom = random.randint(1,2)
+                        alma += almaRandom
+                        print(f"\n- Nem fogadnak nagy örömmel a várban élők, de ígyis eltudsz lopni {almaRandom}x almát. Megmenekülsz!")
+
+                    if randomValasztasKifosztottDolog == "kenyer":
+                        kenyerRandom = random.randint(1,2)
+                        kenyer += kenyerRandom
+                        print(f"\n- Nem fogadnak nagy örömmel a várban élők, de ígyis eltudsz lopni {kenyerRandom}x kenyeret. Megmenekülsz!")
+
+
+                if randomValasztasVarIgen == "3":
+                    varTamadasRandom = random.randint(6,16)
+
+                    eletero = eletero - varTamadasRandom
+
+                    print(f"\n- Nem fogadnak jó szívvel a várlakók, megtámadnak és meg is sérülsz, {varTamadasRandom} sebzést kapsz, így marad {eletero} életerőd.")
+
+                visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+            if valasztasVar == "N":
+                randomkaVarNem = ['1', '2']
+                randomValasztasVarNem = random.choice(randomkaVarNem)
+
+                if randomValasztasVarNem == "1":
+                    print("\n- Lehet jól tetted, hogy nem merészkedtél a vár környékére.")
+
+                if randomValasztasVarNem == "2":
+                    print("\n- Lehet, hogy nagy lehetőséget szalasztottál el...")
+
+                visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+        if randomValasztas == "lovag":
+            randomkaLovag = ['1', '1', '2', '3']
+            randomValasztasLovag = random.choice(randomkaLovag)
+
+            if randomValasztasLovag == '1':
+                print("\n- Összetalálkozol egy lovaggal, majd egy jót beszélgettek, utatok elválik..")
+
+            if randomValasztasLovag == '2':
+
+                lovagTamadasRandom = random.randint(8,18)
+
+                eletero = eletero - lovagTamadasRandom
+
+                print(f"\n- Összetűzésbe kerülsz egy lovaggal aki az utadba állt, súlyos {lovagTamadasRandom} sebzést okozott, {eletero} életerőd maradt.")
+
+            if randomValasztasLovag == '3':
+                
+                lovagTamadasRandomKetto = random.randint(3,7)
+
+                eletero = eletero - lovagTamadasRandomKetto
+
+                print(f"\n- A távolban meglátsz egy lovagot, elbeszélgettetek egymással és tapasztalatokat osztottatok meg, de ellentétbe kerültök egyással, {lovagTamadasRandomKetto} sebzést okozott, {eletero} életerőd maradt.")
+            
+            visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+
+if valasztas == "L": #Leltár
+        
+        os.system('cls')
+
+        if penz != 0:
+            leltar += colored(f" {penz}", attrs=['bold']) + " aranyforint, "
+
+        if kard != 0:
+            leltar += f"\n " + colored(f"{kard}x", attrs=['bold']) + " kard, " # sebzés 5d
+
+        if pajzs != 0:
+            leltar += f"\n " + colored(f"{pajzs}x", attrs=['bold']) + " pajzs, "
+
+
+
+
+        if alma != 0:
+            leltar += f"\n " + colored(f"{alma}x", attrs=['bold']) + " alma, " # +1
+
+        if kenyer != 0:
+            leltar += f"\n " + colored(f"{kenyer}x", attrs=['bold']) + " kenyér, " # +2
+
+        if gyogyital != 0:
+            leltar += f"\n " + colored(f"{gyogyital}x", attrs=['bold']) + " gyógyulás itala, " #10 és 20 között / ritka
+
+        #átok kő
+
+        #balta sebzés 4
