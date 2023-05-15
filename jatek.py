@@ -569,3 +569,16 @@ if valasztas == "L": #Leltár
         #átok kő
 
         #balta sebzés 4
+
+
+        if leltar == '':
+            leltar = colored(' Jelenleg nincs semmi a leltáradban', 'red')
+
+            #visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+        print(f"· ·:·: " + colored(f"Leltárad tartalma", attrs=['bold']) + " :·:· ·")
+        #print(colored("Leltárad tartalma:", "yellow"))
+        print(leltar)
+
+        #visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
