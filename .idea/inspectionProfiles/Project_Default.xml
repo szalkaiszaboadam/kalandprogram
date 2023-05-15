@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="urllib2" />
+          <option value="demo.alpha_vantage" />
+          <option value="talib" />
+          <option value="binance.client" />
+          <option value="binance.enums" />
+          <option value="trading.bot.ORDER_TYPE_MARKET" />
+          <option value="trading.bot.SIDE_SELL" />
+          <option value="trading.bot.SIDE_BUY" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
