@@ -630,3 +630,83 @@ if valasztas == "L": #Leltár
 
                 if gyogyital != 0:
                     felhasznalhatoTargyakRovid += "G/"
+                while True:
+                    valasztasTargy = input("\n---> " + colored(f"[{felhasznalhatoTargyakRovid}]", 'magenta', attrs=['bold']) + ": ")
+
+                    if valasztasTargy != "/" and valasztasTargy != "" and valasztasTargy in felhasznalhatoTargyakRovid:
+
+                        if valasztasTargy == "K":
+                            kenyer = kenyer - 1
+                            eletero += 7
+                            print(f"\n- Megettél egy kenyeret, az életerőd nőtt, mostantól a(z) {eletero} életerőd")
+                            break
+                        
+                        if valasztasTargy == "A":
+                            alma = alma - 1
+                            eletero += 4
+                            print(f"\n- Megettél egy almát, az életerőd nőtt, mostantól a(z) {eletero} életerőd")
+                            break
+
+                        if valasztasTargy == "G":
+                            gyogyital = gyogyital - 1
+                            eletero += 16
+                            print(f"\n- Megittál egy gyógyitalt, az életerőd nőtt, mostantól a(z) {eletero} életerőd")
+                            break
+
+                    else:             
+                        print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+
+            leltar = ''
+            visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+
+        if valasztasIgenNem == "N":
+            leltar = ''
+            visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+        
+        
+if valasztas == "Á": #Árus
+      
+      os.system('cls')
+
+      print(f"· ·:·: " + colored(f"Árus kínálata", attrs=['bold']) + " :·:· ·")
+
+      print("\n gyógyulás itala ~ 17 aranyforint")
+
+      print(colored("\n\nSzeretnél vásorlni valamit?", 'red', attrs=['bold']))
+
+      print(colored("\n [I] igen  ", 'green') + colored("[N] nem  ", 'yellow'))
+
+      while True:
+                valasztasIgenNem = input("\n---> " + colored("[I/N]", 'magenta', attrs=['bold']) + ": ")
+        
+                if valasztasIgenNem == "I":
+                    break
+                if valasztasIgenNem == "N":
+                    break
+                else:
+                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+      if valasztasIgenNem == "I":
+            print(colored("\nVálassz valamit:", 'red', attrs=['bold']))
+
+            print(colored("\n [G] gyógyulás itala  ", 'blue'))
+            while True:
+                valasztasVasarlas = input("\n---> " + colored("[G/]", 'magenta', attrs=['bold']) + ": ")
+        
+                if valasztasVasarlas == "G":
+                    break
+                else:
+                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+            
+            if valasztasVasarlas == "G":
+                if penz >= 17:
+                    gyogyital += 1
+                    penz = penz - 17
+                    print(colored(f"\n- Megvásroltál egy gyógyitalt, most már {gyogyital}x gyógyitalod van, {penz} aranyforintod maradt"))
+                else:
+                    print(colored(f"\n- Nincs elég aranyforintod hogy megvásárolhasd ezt, mivel csak {penz} aranyforintod van"))
+          
+      
+      visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
