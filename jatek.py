@@ -582,3 +582,17 @@ if valasztas == "L": #Leltár
 
         #visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
 
+        print(colored("\n\nSzeretnél felhasználni egy tárgyat?", 'red', attrs=['bold']))
+
+        print(colored("\n [I] igen  ", 'green') + colored("[N] nem  ", 'yellow'))
+            #valasztasCsoves = input("---> " + colored("[K/E]", 'magenta', attrs=['bold']) + ": ")
+
+        while True:
+                valasztasIgenNem = input("\n---> " + colored("[I/N]", 'magenta', attrs=['bold']) + ": ")
+        
+                if valasztasIgenNem == "I":
+                    break
+                if valasztasIgenNem == "N":
+                    break
+                else:
+                    print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
