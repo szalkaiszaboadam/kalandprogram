@@ -1,1 +1,8 @@
-
+Kuki;100;0;1;1;0;0;0
+KukiKuki;100;0;1;1;0;0;0
+KukiKukioisdfjgoiidofgiopdf;100;0;1;1;0;0;0
+KukiKukioisdfjgoiidofgiopdff;100;0;1;1;0;0;0
+KukiKukioisdfjgoiidofgiopdffg;100;0;1;1;0;0;0
+KukiKukioisdfjgoiidofgiopdffgdf;100;0;1;1;0;0;0
+KukiKukioisdfjgoiidofgiopdffgdf& "C:/Program Files/Python310/python.exe" c:/Users/Szalkai-SzaboAdam/Documents/GitHub/kalandprogram/jatek.py;100;0;1;1;0;0;0
+asd;100;0;1;1;0;0;0

@@ -130,6 +130,52 @@ if kezdoValasztas == "B":
 
                         #write(colored("\n" + nev + "!", 'green', attrs=['bold'])); time.sleep(1); write(colored(" Örülök, hogy megismerhetlek! ", 'green') + colored("(", attrs=['bold']) + "Reméljük, hogy hamarosan semmi rossz nem történik ott." + colored(")", attrs=['bold'])); 
 
+                        print(colored("\nLétrehozunk téged...", "green")); time.sleep(2)
+
+                        print("Készen állsz a kalandra?", end='')
+                        time.sleep(1)
+                        var = input(colored(" [NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
+
+                        os.system('cls')
+
+                        write("\n  Utad legelején egy varázslóval találkozol össze. Látja, hogy nincs felszerelésed\n  ezért megszán egy karddal, egy pajjzsal és néhány jó tanáccsal.")
+                        time.sleep(2.7)
+                        os.system('cls')
+
+
+                        break
+                        
+
+
+                    else:
+                        print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
+
+                break
+
+            if ujatekValasztas == "N":
+                exit()
+            else:
+                print(colored("Kérjük, válassz egyet a rendelkezésre álló lehetőségek közül", 'red'))
+
+
+    else:
+
+        mentesekTxt = open("mentesek.txt",  "r", encoding="utf8")
+        sorok = mentesekTxt.readlines()#[1:]
+
+        for i in sorok:
+            sor_darab = i.strip().split(";")
+            adat = {
+                "nev": sor_darab[0],
+                "eletero": int(sor_darab[1]),
+                "penz": int(sor_darab[2]),
+                "kard": int(sor_darab[3]),
+                "pajzs": int(sor_darab[4]),
+                "alma": int(sor_darab[5]),
+                "kenyer" : int(sor_darab[6]),
+                "gyogyital" : int(sor_darab[7]),
+            }
+            mentsekOssz.append(adat)
 
         mentesekTxt.close()
 
@@ -247,6 +293,13 @@ if kezdoValasztas == "Ú":
             break
         else:
             print(colored("Kérjük érvényes nevet adj a karakterednek", 'red'))
+
+
+
+
+
+
+
 
 i = 0
 leltar = ''
@@ -669,5 +722,4 @@ while i < 1:
                     print(colored(f"\n- Nincs elég aranyforintod hogy megvásárolhasd ezt, mivel csak {penz} aranyforintod van"))
           
       
-      visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")     
-        
+      visszateres = input(colored("\n[NYOMJ EGY ENTERT]", "green", attrs=['bold']) + ": ")
